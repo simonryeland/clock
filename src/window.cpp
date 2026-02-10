@@ -30,7 +30,7 @@ void Window::paintEvent (QPaintEvent *event) {
     QPainter painter (this);
     painter.setRenderHint (QPainter::Antialiasing);
 
-    painter.fillRect(rect (), QColor (0, 0, 0, 1));
+    painter.fillRect (rect (), QColor (0, 0, 0, 1));
 
     // 1. Сначала считаем базовый динамический цвет
     int hour = time.hour ();
@@ -118,7 +118,7 @@ void Window::mouseMoveEvent (QMouseEvent *event) {
 // Закрытие по нажатию ESC
 void Window::keyPressEvent (QKeyEvent *event) {
     if (event->key () == Qt::Key_Escape) {
-        qApp->quit(); // Завершает всё приложение, а не просто закрывает окно
+        qApp->quit (); // Завершает всё приложение, а не просто закрывает окно
     }
 }
 
@@ -144,7 +144,7 @@ void Window::contextMenuEvent (QContextMenuEvent *event) {
     else if (width () == 400) medium->setChecked (true);
     else if (width () == 600) large->setChecked (true);
 
-    menu.addSeparator();
+    menu.addSeparator ();
 
     // Пункт Выход
     QAction *quitAction = menu.addAction ("Выход");
@@ -154,7 +154,7 @@ void Window::contextMenuEvent (QContextMenuEvent *event) {
 
     auto animateTo = [this](int newSize) {
         QPropertyAnimation *anim = new QPropertyAnimation (this, "geometry");
-        anim->setDuration (500); // Скорость анимации в мс (0.3 сек)
+        anim->setDuration (500); // Скорость анимации в мс (0.5 сек)
         anim->setStartValue (geometry ());
         
         // Центрируем новый размер относительно старого центра

@@ -14,7 +14,7 @@ make
 ## clear:
 
 ```bash
-make clean; rm -r build_tmp/ clock Makefile .qmake.stash
+make clean; rm -r build_tmp/ clock Makefile .qmake.stash .qtc*/
 ```
 
 <!--

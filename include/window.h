@@ -27,7 +27,7 @@ protected:
     void mousePressEvent (QMouseEvent *event) override;
     void mouseMoveEvent (QMouseEvent *event) override;
     void keyPressEvent (QKeyEvent *event) override;
-    void contextMenuEvent (QContextMenuEvent *event);
+    void contextMenuEvent (QContextMenuEvent *event) override;
 
 };
 
